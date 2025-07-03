@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="icon" href="img/adriego_logo.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Reformas Adriego</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-white text-gray-800">
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo + título -->
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="img/adriego_logo.png" alt="Logo Reformas Adriego" class="w-14 h-14 object-contain">
+        <h1 class="text-2xl font-bold text-green-800">ADRIEGO</h1>
+      </a>
+
+      <!-- Botón hamburguesa (solo visible en móviles) -->
+      <button id="menu-toggle" class="md:hidden text-green-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Navegación -->
+      <nav id="main-menu"
+        class="hidden md:flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-4 absolute md:static bg-white top-20 left-4 right-4 z-10 rounded md:bg-transparent p-4 md:p-0 shadow md:shadow-none">
+        <a href="index.html" class="block py-2 px-2 border-b border-gray-200 hover:underline md:border-0">Inicio</a>
+        <a href="about.html" class="block py-2 px-2 border-b border-gray-200 hover:underline md:border-0">Sobre
+          Nosotros</a>
+        <a href="services.html"
+          class="block py-2 px-2 border-b border-gray-200 hover:underline md:border-0">Servicios</a>
+        <!--<a href="blog.html" class="block py-2 px-2 border-b border-gray-200 hover:underline md:border-0">Blog</a>-->
+        <a href="contact.html" class="block py-2 px-2 border-b border-gray-200 hover:underline md:border-0">Contacto</a>
+
+        <div class="pt-2 md:pt-0 md:ml-4">
+          <a href="quote.html"
+            class="block md:inline-block bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 text-center w-full md:w-auto">
+            Solicita Presupuesto
+          </a>
+        </div>
+
+      </nav>
+    </div>
+
+    <!-- Script para toggle del menú -->
+    <script>
+      const toggleBtn = document.getElementById('menu-toggle');
+      const menu = document.getElementById('main-menu');
+      toggleBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    </script>
+  </header>
+
+  <main class="flex-grow max-w-4xl mx-auto mt-10 px-4 py-8 bg-white rounded-xl shadow border border-gray-200 w-full">
+    <h2 class="text-4xl font-serif text-green-900 mb-10 text-center">Últimas Noticias</h2>
+
+    <article class="mb-10 border-b pb-6">
+      <h3 class="text-2xl font-bold text-green-800 mb-2">Tendencias en reformas de cocinas para 2025</h3>
+      <p class="text-sm text-gray-500 mb-2">Publicado el 2 de julio de 2025</p>
+      <p class="mb-2">Exploramos los colores, materiales y distribuciones más populares que están revolucionando las
+        cocinas este año.</p>
+    </article>
+
+    <article class="mb-10 border-b pb-6">
+      <h3 class="text-2xl font-bold text-green-800 mb-2">Cómo aprovechar al máximo una reforma integral</h3>
+      <p class="text-sm text-gray-500 mb-2">Publicado el 15 de junio de 2025</p>
+      <p class="mb-2">Te damos claves para planificar, distribuir y ahorrar durante una reforma integral sin renunciar
+        al estilo ni a la calidad.</p>
+    </article>
+
+    <article class="mb-10 border-b pb-6">
+      <h3 class="text-2xl font-bold text-green-800 mb-2">Consejos para elegir pintura según el tipo de estancia</h3>
+      <p class="text-sm text-gray-500 mb-2">Publicado el 30 de mayo de 2025</p>
+      <p class="mb-2">¿Mate o satinado? ¿Tonos neutros o cálidos? Te ayudamos a seleccionar la mejor pintura para cada
+        habitación de tu casa.</p>
+    </article>
+  </main>
+
+  <footer class="bg-gray-100 py-6 text-center text-sm mt-16">
+    &copy; 2025 Reformas Adriego. Todos los derechos reservados.
+  </footer>
+</body>
+
+</html>

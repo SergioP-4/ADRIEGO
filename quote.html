@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="icon" href="img/adriego_logo.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicita Presupuesto | Reformas Adriego</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-white text-gray-800">
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo + título -->
+      <a href="index.html" class="flex items-center space-x-3">
+        <img src="img/adriego_logo.png" alt="Logo Reformas Adriego" class="w-14 h-14 object-contain">
+        <h1 class="text-2xl font-bold text-green-800">ADRIEGO</h1>
+      </a>
+
+      <!-- Botón hamburguesa (solo visible en móviles) -->
+      <button id="menu-toggle" class="md:hidden text-green-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Navegación -->
+      <nav id="main-menu"
+        class="hidden md:flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-4 absolute md:static bg-white top-20 left-4 right-4 z-10 rounded md:bg-transparent p-4 md:p-0 shadow md:shadow-none">
+        <a href="index.html" class="block py-2 px-2 border-b border-gray-200 hover:underline md:border-0">Inicio</a>
+        <a href="about.html" class="block py-2 px-2 border-b border-gray-200 hover:underline md:border-0">Sobre
+          Nosotros</a>
+        <a href="services.html"
+          class="block py-2 px-2 border-b border-gray-200 hover:underline md:border-0">Servicios</a>
+        <!--<a href="blog.html" class="block py-2 px-2 border-b border-gray-200 hover:underline md:border-0">Blog</a>-->
+        <a href="contact.html" class="block py-2 px-2 border-b border-gray-200 hover:underline md:border-0">Contacto</a>
+
+        <div class="pt-2 md:pt-0 md:ml-4">
+          <a href="quote.html"
+            class="block md:inline-block bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 text-center w-full md:w-auto">
+            Solicita Presupuesto
+          </a>
+        </div>
+
+      </nav>
+    </div>
+
+    <!-- Script para toggle del menú -->
+    <script>
+      const toggleBtn = document.getElementById('menu-toggle');
+      const menu = document.getElementById('main-menu');
+      toggleBtn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    </script>
+  </header>
+
+  <main class="flex-grow max-w-4xl mx-auto mt-10 px-4 py-8 bg-white rounded-xl shadow border border-gray-200 w-full">
+    <h2 class=" inline-block  font-serif text-green-900 mb-10 text-center">Solicita tu Presupuesto</h2>
+
+    <form class="space-y-6">
+      <div>
+        <label class="block font-medium mb-1">Nombre completo</label>
+        <input type="text" class="w-full border rounded px-4 py-2" required>
+      </div>
+      <div>
+        <label class="block font-medium mb-1">Correo electrónico</label>
+        <input type="email" class="w-full border rounded px-4 py-2" required>
+      </div>
+      <div>
+        <label class="block font-medium mb-1">Teléfono de contacto</label>
+        <input type="tel" class="w-full border rounded px-4 py-2">
+      </div>
+      <div>
+        <label class="block font-medium mb-1">Tipo de reforma</label>
+        <select class="w-full border rounded px-4 py-2" required>
+          <option value="">Selecciona una opción</option>
+          <option>Reforma Integral</option>
+          <option>Baño</option>
+          <option>Cocina</option>
+          <option>Pintura</option>
+          <option>Otra</option>
+        </select>
+      </div>
+      <div>
+        <label class="block font-medium mb-1">Zona o dirección de la reforma</label>
+        <input type="text" class="w-full border rounded px-4 py-2">
+      </div>
+      <div>
+        <label class="block font-medium mb-1">Describe tu proyecto</label>
+        <textarea class="w-full border rounded px-4 py-2" rows="5"></textarea>
+      </div>
+      <div>
+        <label class="block font-medium mb-1">Subir imágenes (opcional)</label>
+        <input type="file" class="w-full border rounded px-4 py-2" multiple>
+      </div>
+      <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800">Enviar
+        solicitud</button>
+    </form>
+
+    <div class="mt-16 text-center">
+      <p class="text-gray-600">También puedes contactarnos directamente por WhatsApp:</p>
+      <a href="https://wa.me/34600111222" target="_blank"
+        class="inline-block mt-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Enviar mensaje</a>
+    </div>
+  </main>
+
+  <footer class="bg-gray-100 py-6 text-center text-sm mt-16">
+    &copy; 2025 Reformas Adriego. Todos los derechos reservados.
+  </footer>
+</body>
+
+</html>
